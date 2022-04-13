@@ -19,11 +19,12 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 5.0.x
-        project: src/Renci.SshNet/Renci.SshNet.csproj
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: src/Renci.SshNet/
     - name: Build
       run: dotnet build --no-restore
+      working-directory: src/Renci.SshNet/
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish  
