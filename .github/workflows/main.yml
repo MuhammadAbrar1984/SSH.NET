@@ -10,11 +10,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - name: Setup dotnet
-      #   uses: actions/setup-dotnet@v1
-      #   with:
-      #     dotnet-version: 3.1.200
-
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.200
+          PROJECT_FILE_PATH: src/Renci.SshNet/Renci.SshNet.csproj
+          
       # Publish
       - name: publish on version change
         id: publish_nuget
