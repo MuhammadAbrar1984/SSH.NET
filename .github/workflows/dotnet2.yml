@@ -17,6 +17,7 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 5.0.x
+        PROJECT_FILE_PATH: src/Renci.SshNet/Renci.SshNet.csproj
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
