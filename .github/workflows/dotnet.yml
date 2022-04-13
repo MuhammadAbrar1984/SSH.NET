@@ -2,9 +2,9 @@ name: .NET
 
 on:
   push:
-    branches: [ master ]
+    branches: [ develop ]
   pull_request:
-    branches: [ master ]
+    branches: [ develop ]
 
 jobs:
   build:
@@ -26,5 +26,5 @@ jobs:
     - name: Publish  
       uses: brandedoutcast/publish-nuget@v2.5.2  
       with:   
-          PROJECT_FILE_PATH: src/Renci.SshNet/Renci.SshNet.csproj  
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}} 
+        PROJECT_FILE_PATH: src/Renci.SshNet/Renci.SshNet.csproj  
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}} 
